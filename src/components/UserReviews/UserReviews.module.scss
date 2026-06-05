@@ -1,0 +1,28 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.userReviews {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+  &__title {
+    @include ContentPaddingInline;
+    @include FontFamilyBody(15px, $color: $text-extra-light);
+    line-height: 153%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  &__bg {
+    display: flex;
+  }
+
+  &__bgImage {
+    display: flex;
+    width: 100%;
+  }
+}

@@ -1,24 +1,15 @@
-import { Benefits } from '../types/Benefits';
+import { IconContent } from '../types/IconContent';
 import { Features } from '../types/Features';
+import { OrderContent } from '../types/OrderContent';
+import { images } from './images';
+import { Review, Reviews } from '../types/Review';
 
-export const headerTitleDesktop =
-  // eslint-disable-next-line max-len
-  'CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)   |   FREE SHIPPING on orders > $200   |   easy 45 day return window.';
+export const headerTitleDesktop = `CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)   |   FREE SHIPPING on orders > $200   |   easy 45 day return window.`;
 export const headerTitleMobile = 'FREE SHIPPING on orders > $200';
-export const aboutComponentText = `Hi! My name’s [Insert Name], and I founded [Insert] in ____.
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis
-          sapien facilisis tincidunt pellentesque. In eget ipsum et felis
-          finibus consequat. Fusce non nibh luctus, dignissim risus quis,
-          bibendum dolor. Donec placerat volutpat ligula, ac consectetur felis
-          varius non. Aliquam a nunc rutrum, porttitor dolor eu, pellentesque
-          est. Vivamus id arcu congue, faucibus libero nec, placerat ligula.
-          Orci varius natoque penatibus et magnis dis parturient montes,
-          nascetur ridiculus mus. Sed eu nisl a metus ultrices sodales. Fusce
-          non ante velit. Sed auctor odio eu semper molestie. Nam mattis, sapien
-          eget lobortis fringilla, eros ipsum tristique tellus, ac convallis
-          urna massa at nibh. Duis non fermentum augue. Vivamus laoreet aliquam
-          risus, sed euismod leo aliquam ut. Vivamus in felis eu lacus feugiat
-          aliquam nec in sapien. Cras mattis varius mollis.`;
+export const reviewText = 'One of 500+ 5 Star Reviews Online';
+export const userReviewsText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis
+        sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus
+        consequat. Fusce non nibh luctus.`;
 
 export const features: Features[] = [
   {
@@ -45,7 +36,7 @@ export const logos = [
   { src: '/img/Artboard5.png', alt: 'image5' },
 ];
 
-export const benefinsContent: Benefits[] = [
+export const benefinsContent: IconContent[] = [
   {
     icon: '/img/icon_cloud.png',
     title: 'Ethically sourced.',
@@ -72,4 +63,46 @@ export const benefinsContent: Benefits[] = [
   },
 ];
 
-export const reviewText = 'One of 500+ 5 Star Reviews Online';
+export const orderContent: OrderContent[] = [
+  {
+    icon: 'img/order_icon1.png',
+    title: 'You save.',
+    text: 'Browse our comfort sets and save 15% when you bundle.',
+    color: '#f0eeef',
+  },
+  {
+    icon: 'img/order_icon2.png',
+    title: 'We ship.',
+    text: 'We ship your items within 1-2 days of receiving your order.',
+    color: '#f9f0e6',
+  },
+  {
+    icon: 'img/order_icon3.png',
+    title: 'You enjoy!',
+    text: 'Wear hernest around the house, out on the town, or in bed.',
+    color: '#f0eeef',
+  },
+];
+
+export const reviews: Review[] = [
+  {
+    icon: images.reviewImageDefault,
+    name: 'Jane, S.',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
+  },
+  {
+    icon: images.reviewImageDefault,
+    name: 'Mile, R.',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
+  },
+  {
+    icon: images.reviewImageDefault,
+    name: 'Jone, Y.',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
+  },
+  {
+    icon: images.reviewImageDefault,
+    name: 'Ann, L.',
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
+  },
+];

@@ -1,0 +1,31 @@
+@use '@/styles/_variables.scss' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.orderBlock {
+  margin-block: 75px;
+  display: flex;
+  flex-direction: column;
+  gap: 23px;
+
+  @include onDesktop {
+    gap: 46px;
+  }
+
+  &__list {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 41px;
+  }
+
+  &__btn {
+    padding-inline: 20px;
+    align-self: center;
+    margin-top: 18px;
+
+    @include onDesktop {
+      width: 365px;
+      margin-top: 10px;
+    }
+  }
+}

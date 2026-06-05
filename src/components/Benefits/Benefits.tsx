@@ -6,6 +6,7 @@ import ImageSlider from '../ImageSlider/ImageSlider';
 import * as styles from './Benefits.module.scss';
 import BenefitList from './components/BenefitList/BenefitList';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
+import BtnContent from '../../shared/components/BtnContent/BtnContent';
 
 export default function Benefits() {
   const isDesktop = useIsDesktop();
@@ -21,15 +22,16 @@ export default function Benefits() {
 
       <BenefitList />
       {!isDesktop && (
-        <div className={styles.benefits__btn__content}>
-          <div className={styles.benefits__container}>
-            <BtnCustomize />
-          </div>
-          <div className={styles.benefits__stars}>
-            <StarList />
-            <span className={styles.benefits__stars__text}>{reviewText}</span>
-          </div>
-        </div>
+        <BtnContent />
+        // <div className={styles.benefits__btn__content}>
+        //   <div className={styles.benefits__container}>
+        //     <BtnCustomize />
+        //   </div>
+        //   <div className={styles.benefits__stars}>
+        //     <StarList />
+        //     <span className={styles.benefits__stars__text}>{reviewText}</span>
+        //   </div>
+        // </div>
       )}
     </div>
   );

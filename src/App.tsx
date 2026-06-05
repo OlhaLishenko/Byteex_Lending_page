@@ -2,7 +2,9 @@ import * as styles from './App.module.scss';
 import About from './components/About/About';
 import Benefits from './components/Benefits/Benefits';
 import HeroSection from './components/HeroSection/HeroSection';
+import OrderBlock from './components/OrderBlock/OrderBlock';
 import SliderBlock from './components/SliderBlock/SliderBlock';
+import UserReviews from './components/UserReviews/UserReviews';
 import { headerTitleMobile } from './shared/variables/variables';
 
 export const App = () => {
@@ -23,16 +25,22 @@ export const App = () => {
         </picture>
       </section>
 
-      <div className={styles.app__slider}>
-        <SliderBlock />
-      </div>
-      <div className={styles.app__container}>
-        <Benefits />
-      </div>
-      <div
-        className={`${styles.app__container} ${styles.app__container__gray}`}
-      >
-        <About />
+      <div className={styles.app__main}>
+        <div className={styles.app__slider}>
+          <SliderBlock />
+        </div>
+        <div className={styles.app__container}>
+          <Benefits />
+        </div>
+        <div
+          className={`${styles.app__container} ${styles.app__container__gray}`}
+        >
+          <About />
+        </div>
+        <div className={styles.app__container__order}>
+          <OrderBlock />
+        </div>
+        <UserReviews />
       </div>
     </div>
   );

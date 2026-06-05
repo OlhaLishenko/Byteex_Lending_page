@@ -9,6 +9,7 @@
   letter-spacing: 0.04em;
   text-align: center;
   color: $darkBlue;
+  align-self: center;
 
   @include onDesktop {
     font-size: 38px;

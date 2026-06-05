@@ -1,4 +1,4 @@
-@use '@/styles/variables' as *;
+@use '@/styles/_variables.scss' as *;
 @use '@/styles/_mixins.scss' as *;
 
 .benefits {
@@ -7,7 +7,6 @@
   flex-direction: column;
   grid-template-columns: repeat(1, 1fr);
   margin-block: 43px;
-  // margin-inline: 50px;
   grid-template-areas:
     "title"
     "slider"
@@ -15,22 +14,18 @@
     "benefitContent";
 
   @include onDesktop {
-    // margin-inline: 50px;
     margin-block: 110px;
     flex-direction: row;
     grid-template-columns: 1fr 500px;
-    // grid-template-columns: repeat(2, 1fr, 500px);
     grid-template-areas:
       "title slider"
       "benefitList slider"
       "benefitContent slider";
   }
 
-
   &__container {
     padding-inline: 30px;
     margin-bottom: 25px;
-    order: 0;
     grid-area: title;
 
     @include onDesktop {
@@ -49,20 +44,20 @@
     }
   }
 
-  &__stars {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    justify-content: center;
+  // &__stars {
+  //   display: flex;
+  //   flex-direction: row;
+  //   gap: 2px;
+  //   justify-content: center;
 
-    &__text {
-      @include FontReview();
-    }
-  }
+  //   &__text {
+  //     @include FontReview();
+  //   }
+  // }
 
-  &__btn__content {
-    display: flex;
-    flex-direction: column;
-    gap: 13px;
-  }
+  // &__btn__content {
+  //   display: flex;
+  //   flex-direction: column;
+  //   gap: 13px;
+  // }
 }

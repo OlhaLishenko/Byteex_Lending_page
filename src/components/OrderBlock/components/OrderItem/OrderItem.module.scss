@@ -1,0 +1,44 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.orderItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  background-color: $gray-ligth;
+  width: 288px;
+  height: 288px;
+  justify-content: center;
+  align-items: center;
+  border-radius: $border-radius;
+
+  &__iconContainer {
+    width: 51px;
+    height: 51px;
+    display: flex;
+
+    @include onDesktop {
+      width: 60px;
+      height: 60px;
+    }
+  }
+
+  &__icon {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__title {
+    @include FontFamilyBody(22px, 500, $darkBlue);
+    line-height: 182%;
+    letter-spacing: 0.04em;
+  }
+
+  &__text {
+    text-align: center;
+    @include FontFamilyBody(15px, 400, $text-extra-light);
+    line-height: 153%;
+    letter-spacing: 0.03em;
+    padding-inline: 32px;
+  }
+}

@@ -30,6 +30,16 @@
     }
   }
 
+  &__main {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    @include onDesktop {
+      gap: 70px;
+    }
+  }
+
   &__slider {
     margin-top: 92px;
     @include ContentPaddingInline();
@@ -38,5 +48,4 @@
       margin-top: 77px;
     }
   }
-
 }
