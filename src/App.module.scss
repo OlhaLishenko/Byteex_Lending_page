@@ -6,6 +6,10 @@
     @include ContentPaddingInline;
     justify-content: center;
     display: flex;
+
+    &__gray {
+      background-color: $gray-ligth;
+    }
   }
 
   &__header {

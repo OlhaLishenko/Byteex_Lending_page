@@ -2,5 +2,52 @@
 @use '@/styles/_mixins.scss' as *;
 
 .about {
+  max-width: $max-content-width;
   margin-block: 50px;
+  display: grid;
+  column-gap: 50px;
+  grid-template-columns: 1fr;
+  padding-inline: 50px;
+  grid-template-areas:
+    "titleAbout"
+    "imageAbout"
+    "textAbout";
+
+  @include onDesktop {
+    grid-template-columns: 523px 1fr;
+    grid-template-areas:
+      "imageAbout titleAbout"
+      "imageAbout textAbout"
+      "imageAbout btn";
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+
+    &__container {
+      display: flex;
+      grid-area: imageAbout;
+    }
+  }
+
+  &__text {
+    grid-area: textAbout;
+    @include FontFamilyBody(13px, 400, $text-extra-light);
+    line-height: 153%;
+    letter-spacing: 0.03em;
+  }
+
+  &__btn {
+    @include onDesktop {
+      grid-area: btn;
+      max-width: 362px;
+    }
+  }
+}
+
+.textAbout {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }

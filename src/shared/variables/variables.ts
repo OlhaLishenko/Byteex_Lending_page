@@ -5,8 +5,8 @@ export const headerTitleDesktop =
   // eslint-disable-next-line max-len
   'CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)   |   FREE SHIPPING on orders > $200   |   easy 45 day return window.';
 export const headerTitleMobile = 'FREE SHIPPING on orders > $200';
-export const aboutComponentText = `Hi! My name’s [Insert Name], and I founded [Insert] in ____. Lorem
-          ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis
+export const aboutComponentText = `Hi! My name’s [Insert Name], and I founded [Insert] in ____.
+Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis
           sapien facilisis tincidunt pellentesque. In eget ipsum et felis
           finibus consequat. Fusce non nibh luctus, dignissim risus quis,
           bibendum dolor. Donec placerat volutpat ligula, ac consectetur felis

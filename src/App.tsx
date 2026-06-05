@@ -29,7 +29,9 @@ export const App = () => {
       <div className={styles.app__container}>
         <Benefits />
       </div>
-      <div className={styles.app__container}>
+      <div
+        className={`${styles.app__container} ${styles.app__container__gray}`}
+      >
         <About />
       </div>
     </div>

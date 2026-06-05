@@ -15,10 +15,11 @@
     "benefitContent";
 
   @include onDesktop {
-    margin-inline: 50px;
+    // margin-inline: 50px;
     margin-block: 110px;
     flex-direction: row;
-    grid-template-columns: repeat(2, 1fr, 500px);
+    grid-template-columns: 1fr 500px;
+    // grid-template-columns: repeat(2, 1fr, 500px);
     grid-template-areas:
       "title slider"
       "benefitList slider"
