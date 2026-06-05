@@ -1,0 +1,14 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.starList {
+  display: flex;
+  flex-direction: row;
+  gap: 2px;
+  align-items: center;
+
+  &__icon {
+    width: 11px;
+    height: 11px;
+  }
+}

@@ -1,0 +1,60 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.slider {
+  // padding-bottom: 40px;
+  width: 100%;
+
+  @include onDesktop {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  :global(.swiper-slide) {
+    justify-content: center;
+  }
+
+  :global(.swiper) {
+    width: 100%;
+    justify-content: center;
+  }
+
+  :global(.swiper-wrapper) {
+    align-items: center;
+  }
+
+  :global(.swiper-pagination-bullet) {
+    --swiper-pagination-color: black;
+    --swiper-pagination-bullet-inactive-color: #{$gray};
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    width: 8px;
+    height: 8px;
+  }
+
+  :global(.swiper-pagination) {
+    position: static;
+    bottom: 0;
+
+  }
+
+  &__icon {
+    width: 100%;
+    margin: auto;
+    display: flex;
+
+    @include onDesktop {}
+  }
+}
+
+.logoList {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  column-gap: 103px;
+  align-items: center;
+
+  &__item {
+    width: 100%;
+
+  }
+}

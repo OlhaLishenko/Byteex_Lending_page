@@ -1,0 +1,19 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.textTitle {
+  font-family: $font-body;
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 131%;
+  letter-spacing: 0.04em;
+  text-align: center;
+  color: $darkBlue;
+
+  @include onDesktop {
+    font-size: 38px;
+    line-height: 118%;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+}

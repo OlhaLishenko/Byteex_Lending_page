@@ -1,0 +1,38 @@
+@use './styles/variables' as *;
+@use './styles/mixins' as *;
+
+.app {
+  &__container {
+    @include ContentPaddingInline;
+    justify-content: center;
+    display: flex;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: center;
+    background-color: $accent;
+    @include FontSmall();
+    margin-bottom: 14px;
+  }
+
+  &__bg {
+    position: absolute;
+    z-index: -1;
+    width: 100%;
+
+    &__image {
+      width: 100%;
+    }
+  }
+
+  &__slider {
+    margin-top: 92px;
+    @include ContentPaddingInline();
+
+    @include onDesktop {
+      margin-top: 77px;
+    }
+  }
+
+}

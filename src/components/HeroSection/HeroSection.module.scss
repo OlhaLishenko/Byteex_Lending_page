@@ -1,0 +1,94 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.hero {
+  max-width: $max-content-width;
+  margin-bottom: 86px;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    'header'
+    "image"
+    "features"
+    "info"
+    "slider";
+
+  @include onDesktop {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+      "header header image image image"
+      "features features image image image"
+      "info info image image image"
+      "slider slider image image image";
+  }
+
+  &__logo {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    grid-area: header;
+
+    @include onDesktop {
+      gap: 60px;
+    }
+
+    &__info {
+      gap: 31px;
+      grid-area: info;
+      margin-top: 30px;
+      position: relative;
+
+      @include onDesktop {
+        gap: 46px;
+        margin-top: 39px;
+      }
+    }
+  }
+
+  &__headerImg {
+    width: 100%;
+
+
+    &__container {
+      @include onDesktop {
+        grid-area: image;
+        padding-left: 100px;
+      }
+
+    }
+
+    @include onDesktop {
+      margin-top: 137px;
+    }
+
+  }
+
+  &__btn__container {
+    width: 100%;
+
+    @include onDesktop {
+      width: 362px;
+    }
+
+  }
+
+  &__review__container {
+    align-self: center;
+    max-width: 436px;
+    position: absolute;
+    z-index: 1;
+    top: 86px;
+
+    @include onDesktop {
+      align-self: flex-start;
+    }
+
+  }
+}

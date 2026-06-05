@@ -1,0 +1,34 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.features {
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/-1;
+  gap: 26px;
+  // padding-inline: 26px;
+  margin-top: 25px;
+  grid-area: features;
+
+  @include onDesktop {
+    // grid-column: 1/2;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: row;
+    gap: 13px;
+  }
+
+  &__icon {
+    @include iconSize();
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+    @include FontFamilyBody(13px);
+    line-height: 138%;
+    letter-spacing: 0.03em;
+  }
+}

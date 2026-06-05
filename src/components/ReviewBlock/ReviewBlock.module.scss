@@ -1,0 +1,53 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.reviewBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  box-shadow: 0 3px 10px 1px rgba(0, 0, 0, 0.08);
+  background: $white;
+
+
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  padding: 13px;
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+
+    &__image {
+      width: 39px;
+      height: 39px;
+    }
+
+    &__title {
+      display: flex;
+      flex-direction: column;
+
+      &__wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+      }
+
+      &__name {
+        @include FontFamilyBody(15px);
+        line-height: 153%;
+        letter-spacing: 0.03em;
+      }
+
+      &__text {
+        @include FontReview();
+      }
+    }
+  }
+
+  &__text {
+    @include FontFamilyBody(12px);
+    line-height: 192%;
+    letter-spacing: 0.04em;
+  }
+}

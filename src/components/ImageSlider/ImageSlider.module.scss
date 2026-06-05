@@ -1,0 +1,114 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+// .container {
+//   grid-column: 1/-1;
+
+//   @include onDesktop {
+//     grid-column: 2/-1;
+//   }
+// }
+
+
+.productSlider {
+  height: 100%;
+  position: relative;
+  // padding: 0 40px;
+  // padding-inline: 40px;
+  display: flex;
+  justify-content: center;
+
+
+  @include onDesktop {
+    // width: 500px;
+  }
+
+  &__title {
+    @include FontFamilyBody(13px);
+    line-height: 169%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+
+  &__controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+  }
+
+  &__btn {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    color: #1a1f3c;
+    padding: 8px 16px;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &_control_right {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__main {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+
+    &__title {
+      position: absolute;
+      bottom: -10px;
+      overflow: visible;
+    }
+
+
+    :global(.swiper-slide) img {
+      width: 100%;
+      height: 100%;
+    }
+
+    :global(.swiper-slide) {
+      display: flex;
+    }
+  }
+
+  &__mainWrap {
+    position: relative;
+    min-width: 200px;
+  }
+
+  &__thumbs {
+    position: absolute !important;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    overflow: visible !important;
+
+    :global(.swiper-wrapper) {
+      justify-content: center;
+      overflow: visible !important;
+    }
+
+    :global(.swiper-slide) {
+      cursor: pointer;
+      width: 23px;
+      height: 23px;
+
+      img {
+        width: 23px;
+        height: 23px;
+        object-fit: cover;
+      }
+    }
+
+    :global(.swiper-slide-thumb-active) {
+      outline: white solid 2px;
+
+    }
+  }
+}

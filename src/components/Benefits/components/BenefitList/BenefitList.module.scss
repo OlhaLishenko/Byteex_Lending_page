@@ -1,0 +1,77 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.benefitList {
+  display: flex;
+  flex-direction: column;
+  padding-inline: 50px;
+  gap: 30px;
+  margin-block: 60px;
+  grid-column: 1/-1;
+  grid-area: benefitList;
+
+  @include onDesktop {
+    // padding-left: 100px;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 32px;
+      align-items: flex-start;
+    }
+  }
+
+  &__title {
+    @include FontFamilyBody(20px, 500, $darkBlue);
+    line-height: 120%;
+    letter-spacing: 0.04em;
+  }
+
+  &__text {
+    @include FontFamilyBody(14px);
+    text-align: center;
+    line-height: 129%;
+    letter-spacing: 0.03em;
+    max-width: 300px;
+
+    @include onDesktop {
+      text-align: left;
+      max-width: 500px;
+    }
+
+    &__container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+
+      @include onDesktop {
+        gap: 14px;
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__icon {
+    width: 42px;
+    height: 42px;
+
+    @include onDesktop {}
+  }
+
+  &__separator {
+    background-color: $gray;
+    opacity: 0.5;
+    height: 1px;
+    width: 100%;
+    min-height: 1px;
+    margin-top: 20px;
+    align-self: stretch;
+  }
+}

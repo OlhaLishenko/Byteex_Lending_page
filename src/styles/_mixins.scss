@@ -1,0 +1,43 @@
+@use './variables' as *;
+
+@mixin onDesktop {
+  @media(min-width: $min-desktop-screen) {
+    @content;
+  }
+}
+
+@mixin ContentPaddingInline {
+  padding-inline: 20px;
+
+  @include onDesktop() {
+    padding-inline: 62px;
+  }
+}
+
+@mixin FontSmall {
+  font-family: $font-body;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 318%;
+  letter-spacing: 0.08em;
+  text-align: center;
+  color: $text-light;
+}
+
+@mixin FontFamilyBody ($size, $weight: 400, $color: $text-extra-light) {
+  font-family: $font-body;
+  font-weight: $weight;
+  font-size: $size;
+  color: $color;
+}
+
+@mixin FontReview {
+  @include FontFamilyBody(11px);
+  line-height: 182%;
+  letter-spacing: 0.02em;
+}
+
+@mixin iconSize {
+  width: 31px;
+  height: 31px;
+}

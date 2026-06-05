@@ -1,0 +1,21 @@
+@use '@/styles/variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.sliderBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+  &__title {
+    @include FontFamilyBody(15px);
+    line-height: 120%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    color: $color-text-slider;
+    display: flex;
+    justify-content: center;
+
+  }
+
+}
