@@ -1,0 +1,83 @@
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.questionBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-inline: 40px;
+  max-width: $max-content-width;
+
+  @include onDesktop {
+    flex-direction: row;
+    gap: 80px;
+  }
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    @include onDesktop {
+      gap: 60px;
+    }
+  }
+
+  &__imgContainer {
+    @include onDesktop {
+      max-width: 430px;
+    }
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 350px;
+
+    @include onDesktop {
+      max-width: 630px;
+      gap: 30px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__trigger {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: white;
+  }
+
+  &__triggerTitle {
+    @include FontFamilyBody(18px, 400, $darkBlue);
+    line-height: 133%;
+    letter-spacing: 0.04em;
+  }
+
+  &__content {
+    @include FontFamilyBody(15px);
+    line-height: 143%;
+    letter-spacing: 0.03em;
+  }
+
+  &__separator {
+    background-color: $gray;
+    opacity: 0.5;
+    height: 1px;
+    width: 100%;
+    min-height: 1px;
+    align-self: stretch;
+  }
+}

@@ -1,0 +1,49 @@
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.userReviewItem {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 33px;
+  background-color: white;
+  border: 1px solid $border-color;
+  border-radius: 8px;
+  // box-shadow: 0 3px 10px 1px #000;
+  // box-shadow: 0 3px 10px 1px $box-shadow;
+
+  @include onDesktop {
+    // min-width: 338px;
+    width: 288px;
+  }
+
+
+  &__header {
+    display: flex;
+    flex-direction: row;
+    gap: 14px;
+  }
+
+  &__icon {
+    width: 35px;
+    height: 35px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__name {
+    @include FontFamilyBody(15px);
+    line-height: 153%;
+    letter-spacing: 0.03em;
+  }
+
+  &__text {
+    @include FontFamilyBody(13px);
+    line-height: 167%;
+    letter-spacing: 0.04em;
+  }
+}

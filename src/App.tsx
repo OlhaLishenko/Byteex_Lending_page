@@ -3,6 +3,7 @@ import About from './components/About/About';
 import Benefits from './components/Benefits/Benefits';
 import HeroSection from './components/HeroSection/HeroSection';
 import OrderBlock from './components/OrderBlock/OrderBlock';
+import QuestionBlock from './components/QuestionBlock/QuestionBlock';
 import SliderBlock from './components/SliderBlock/SliderBlock';
 import UserReviews from './components/UserReviews/UserReviews';
 import { headerTitleMobile } from './shared/variables/variables';
@@ -41,6 +42,9 @@ export const App = () => {
           <OrderBlock />
         </div>
         <UserReviews />
+        <div className={styles.app__container}>
+          <QuestionBlock />
+        </div>
       </div>
     </div>
   );

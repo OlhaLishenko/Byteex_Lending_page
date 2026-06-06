@@ -1,4 +1,4 @@
-@use '@/styles/variables' as *;
+@use '@/styles/_variables' as *;
 @use '@/styles/_mixins.scss' as *;
 
 .slider {
@@ -35,7 +35,6 @@
   :global(.swiper-pagination) {
     position: static;
     bottom: 0;
-
   }
 
   &__icon {

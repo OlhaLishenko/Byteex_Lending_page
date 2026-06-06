@@ -2,7 +2,7 @@ import BtnCustomize from '../../shared/components/BtnCustomize/BtnCustomize';
 import StarList from '../../shared/components/StarList/StarList';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
 import { reviewText } from '../../shared/variables/variables';
-import ImageSlider from '../ImageSlider/ImageSlider';
+import ImageSlider from './components/ImageSlider/ImageSlider';
 import * as styles from './Benefits.module.scss';
 import BenefitList from './components/BenefitList/BenefitList';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';

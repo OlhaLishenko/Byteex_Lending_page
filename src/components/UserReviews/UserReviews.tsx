@@ -1,7 +1,9 @@
 /* eslint-disable @typescript-eslint/dot-notation */
+import BtnContent from '../../shared/components/BtnContent/BtnContent';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
 import { images } from '../../shared/variables/images';
 import { userReviewsText } from '../../shared/variables/variables';
+import ReviewSlider from './components/ReviewSlider/ReviewSlider';
 import * as styles from './UserReviews.module.scss';
 
 export default function UserReviews() {
@@ -23,6 +25,12 @@ export default function UserReviews() {
             className={styles.userReviews__bgImage}
           />
         </picture>
+      </div>
+      <div className={styles.userReviews__sliderContainer}>
+        <ReviewSlider />
+      </div>
+      <div className={styles.userReviews__btnContainer}>
+        <BtnContent />
       </div>
     </div>
   );

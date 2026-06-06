@@ -2,7 +2,7 @@ import { IconContent } from '../types/IconContent';
 import { Features } from '../types/Features';
 import { OrderContent } from '../types/OrderContent';
 import { images } from './images';
-import { Review, Reviews } from '../types/Review';
+import { Review } from '../types/Review';
 
 export const headerTitleDesktop = `CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)   |   FREE SHIPPING on orders > $200   |   easy 45 day return window.`;
 export const headerTitleMobile = 'FREE SHIPPING on orders > $200';
@@ -86,23 +86,64 @@ export const orderContent: OrderContent[] = [
 
 export const reviews: Review[] = [
   {
+    id: 1,
     icon: images.reviewImageDefault,
     name: 'Jane, S.',
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi.`,
   },
   {
+    id: 2,
     icon: images.reviewImageDefault,
     name: 'Mile, R.',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
   },
   {
+    id: 3,
     icon: images.reviewImageDefault,
     name: 'Jone, Y.',
-    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
+    text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet.`,
   },
   {
+    id: 4,
     icon: images.reviewImageDefault,
     name: 'Ann, L.',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo. Aenean eget aliquet mi. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales.`,
+  },
+];
+
+export const sectionTitle = {
+  questionBlock: 'frequently asked questions.',
+};
+
+export const questionBlockContent = [
+  {
+    id: 1,
+    title: 'lorem ipsum dolor sit amet',
+    text: `Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers and visit as often as possible. `,
+  },
+  {
+    id: 2,
+    title: 'lorem ipsum dolor sit amet',
+    text: `Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers and visit as often as possible. `,
+  },
+  {
+    id: 3,
+    title: 'lorem ipsum dolor sit amet',
+    text: `Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers and visit as often as possible. `,
+  },
+  {
+    id: 4,
+    title: 'lorem ipsum dolor sit amet',
+    text: `Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers and visit as often as possible. `,
+  },
+  {
+    id: 5,
+    title: 'lorem ipsum dolor sit amet',
+    text: `Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers and visit as often as possible. `,
+  },
+  {
+    id: 6,
+    title: 'lorem ipsum dolor sit amet',
+    text: `Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers and visit as often as possible. `,
   },
 ];

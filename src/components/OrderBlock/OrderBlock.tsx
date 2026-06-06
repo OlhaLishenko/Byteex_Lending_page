@@ -11,9 +11,11 @@ import 'swiper/css/scrollbar';
 import CustomSlider from '../../shared/components/CustomSlider/CustomSlider';
 import BtnContent from '../../shared/components/BtnContent/BtnContent';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
+import { useSliderNavigation } from '../../shared/hooks/useSliderNavigation';
 
 export default function OrderBlock() {
   const isDesktop = useIsDesktop();
+  const { prevRef, nextRef, swiperRef } = useSliderNavigation();
 
   return (
     <div className={styles.orderBlock}>
@@ -27,7 +29,14 @@ export default function OrderBlock() {
             ))}
           </>
         ) : (
-          <CustomSlider>
+          <CustomSlider
+            prevRef={prevRef}
+            nextRef={nextRef}
+            swiperRef={swiperRef}
+            isPagination={false}
+            isShadow={false}
+            slidesPerView={'auto'}
+          >
             {orderContent.map(item => (
               <SwiperSlide key={item.title}>
                 <OrderItem orderItems={item} />

@@ -3,8 +3,8 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
-import { useIsDesktop } from '../../hooks/useIsDesktop';
-import { logos } from '../../variables/variables';
+import { useIsDesktop } from '../../../../shared/hooks/useIsDesktop';
+import { logos } from '../../../../shared/variables/variables';
 
 export default function Slider() {
   const isDesktop = useIsDesktop();

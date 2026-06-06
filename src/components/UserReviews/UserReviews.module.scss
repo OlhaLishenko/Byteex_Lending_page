@@ -1,10 +1,21 @@
-@use '@/styles/variables' as *;
+@use '@/styles/_variables' as *;
 @use '@/styles/_mixins.scss' as *;
 
 .userReviews {
   display: flex;
   flex-direction: column;
   gap: 40px;
+  // align-items: center;
+
+  &__btnContainer {
+    @include ContentPaddingInline;
+  }
+
+  &__sliderContainer {
+    @include onDesktop {
+      // margin-inline: 90px
+    }
+  }
 
   &__title {
     @include ContentPaddingInline;
