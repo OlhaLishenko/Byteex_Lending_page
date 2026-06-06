@@ -2,6 +2,8 @@
 @use './styles/mixins' as *;
 
 .app {
+  // margin-bottom: 80px;
+
   &__container {
     @include ContentPaddingInline;
     justify-content: center;
@@ -48,4 +50,13 @@
       margin-top: 77px;
     }
   }
+
+  // &__footerBg {
+  //   width: 100%;
+  //   position: absolute;
+  //   left: 0;
+  //   right: 0;
+  //   transform: rotate(180deg);
+  //   z-index: -2;
+  // }
 }

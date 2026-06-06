@@ -1,0 +1,34 @@
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+
+.footer {
+  display: flex;
+  flex-direction: column;
+
+  &__imageWrapper {
+    margin-block: 40px;
+  }
+
+  &__image {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__bg {
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    transform: rotate(180deg);
+    z-index: -1;
+  }
+
+  &__text {
+    @include FontFamilyBody(15px);
+    line-height: 147%;
+    letter-spacing: 0.03em;
+    text-align: center;
+    margin-top: 10px;
+  }
+}

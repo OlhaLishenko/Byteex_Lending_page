@@ -1,15 +1,22 @@
 import { IconContent } from '../types/IconContent';
 import { Features } from '../types/Features';
 import { OrderContent } from '../types/OrderContent';
-import { images } from './images';
+import { icons, images } from './images';
 import { Review } from '../types/Review';
+import { InfoBannerContent } from '../types/InfoBannerContent';
 
-export const headerTitleDesktop = `CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)   |   FREE SHIPPING on orders > $200   |   easy 45 day return window.`;
-export const headerTitleMobile = 'FREE SHIPPING on orders > $200';
-export const reviewText = 'One of 500+ 5 Star Reviews Online';
-export const userReviewsText = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis
-        sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus
-        consequat. Fusce non nibh luctus.`;
+export const sectionText = {
+  headerTitle: {
+    mobile: 'FREE SHIPPING on orders > $200',
+    desktop: `CONSCIOUSLY MADE BUTTER SOFT STAPLES FOR EVERY DAY (OR NIGHT)   |   FREE SHIPPING on orders > $200   |   easy 45 day return window.`,
+  },
+  reviewText: 'One of 500+ 5 Star Reviews Online',
+  userReviewsText: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. Fusce non nibh luctus.`,
+  footerText: {
+    mobile: `Click below to browse our collection!`,
+    desktop: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat.`,
+  },
+};
 
 export const features: Features[] = [
   {
@@ -113,6 +120,8 @@ export const reviews: Review[] = [
 
 export const sectionTitle = {
   questionBlock: 'frequently asked questions.',
+  infoBanner: 'Our total green impact',
+  footer: 'Find something you love.',
 };
 
 export const questionBlockContent = [
@@ -145,5 +154,23 @@ export const questionBlockContent = [
     id: 6,
     title: 'lorem ipsum dolor sit amet',
     text: `Our fabrics and garments are made in Portugal. We build strong relationships with our immediate suppliers and visit as often as possible. `,
+  },
+];
+
+export const infoBannerContent: InfoBannerContent[] = [
+  {
+    icon: icons.infoBanner.icon1,
+    title: '3,927 kg',
+    text: 'of CO2 saved',
+  },
+  {
+    icon: icons.infoBanner.icon2,
+    title: '2,546,167 days',
+    text: 'of drinking water saved',
+  },
+  {
+    icon: icons.infoBanner.icon3,
+    title: '7,321 kWh',
+    text: 'of energy saved',
   },
 ];

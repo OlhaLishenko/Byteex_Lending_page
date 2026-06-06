@@ -1,6 +1,6 @@
 import StarList from '../../shared/components/StarList/StarList';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
-import { reviewText } from '../../shared/variables/variables';
+import { sectionText } from '../../shared/variables/variables';
 import * as styles from './ReviewBlock.module.scss';
 
 export default function ReviewBlock() {
@@ -25,7 +25,7 @@ export default function ReviewBlock() {
           <div className={styles.reviewBlock__header__title__wrapper}>
             <StarList />
             <span className={styles.reviewBlock__header__title__text}>
-              {reviewText}
+              {sectionText.reviewText}
             </span>
           </div>
           <span className={styles.reviewBlock__header__title__name}>

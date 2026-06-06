@@ -1,0 +1,47 @@
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.infoBannerItem {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+
+
+  @include onDesktop {
+    flex-direction: row;
+    gap: 50px;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+    align-items: center;
+  }
+
+  &__imgContainer {
+    width: 41px;
+    height: 41px;
+  }
+
+  &__img {
+    width: 100%;
+    object-fit: contain;
+  }
+
+  &__content {
+    line-height: 91%;
+    letter-spacing: 0.02em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    &__title {
+      @include FontFamilyBody(22px, 600, $lightBlue);
+    }
+
+    &__text {
+      @include FontFamilyBody(14px, 400, $lightBlue);
+    }
+  }
+}

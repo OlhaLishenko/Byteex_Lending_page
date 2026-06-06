@@ -2,7 +2,7 @@
 import BtnContent from '../../shared/components/BtnContent/BtnContent';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
 import { images } from '../../shared/variables/images';
-import { userReviewsText } from '../../shared/variables/variables';
+import { sectionText } from '../../shared/variables/variables';
 import ReviewSlider from './components/ReviewSlider/ReviewSlider';
 import * as styles from './UserReviews.module.scss';
 
@@ -11,7 +11,9 @@ export default function UserReviews() {
     <div className={styles.userReviews}>
       <div className={styles.userReviews__title}>
         <TextTitle>{'What are our fans saying?'}</TextTitle>
-        <span className={styles.userReviews__text}>{userReviewsText}</span>
+        <span className={styles.userReviews__text}>
+          {sectionText.userReviewsText}
+        </span>
       </div>
       <div className={styles.userReviews__bg}>
         <picture className={styles.userReviews__bg}>

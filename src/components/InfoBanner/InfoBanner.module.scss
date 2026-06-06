@@ -1,2 +1,21 @@
-@use '@/styles/_variables' as *; @use '@/styles/_mixins.scss' as *; .infoBanner
-{ }
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.infoBanner {
+  background-color: $gray-ligth;
+  margin-block: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 38px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 23px;
+
+    @include onDesktop {
+      flex-direction: row;
+      gap: 50px;
+    }
+  }
+}
