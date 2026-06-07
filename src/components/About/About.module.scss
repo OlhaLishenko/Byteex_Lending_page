@@ -6,14 +6,15 @@
   margin-block: 50px;
   display: grid;
   column-gap: 50px;
+  row-gap: 30px;
   grid-template-columns: 1fr;
-  padding-inline: 50px;
   grid-template-areas:
     "titleAbout"
     "imageAbout"
     "textAbout";
 
   @include onDesktop {
+    row-gap: 30px;
     grid-template-columns: 523px 1fr;
     grid-template-areas:
       "imageAbout titleAbout"

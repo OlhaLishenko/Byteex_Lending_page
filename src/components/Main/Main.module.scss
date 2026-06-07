@@ -1,0 +1,31 @@
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+
+  @include onDesktop {
+    gap: 70px;
+  }
+
+  &__container {
+    @include ContentPaddingInline;
+    justify-content: center;
+    display: flex;
+
+    &__gray {
+      background-color: $gray-ligth;
+    }
+  }
+
+  &__slider {
+    margin-top: 120px;
+    @include ContentPaddingInline();
+
+    @include onDesktop {
+      margin-top: 130px;
+    }
+  }
+}

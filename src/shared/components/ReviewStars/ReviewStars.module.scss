@@ -1,0 +1,13 @@
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.reviewStars {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  justify-content: center;
+
+  &__text {
+    @include FontReview();
+  }
+}

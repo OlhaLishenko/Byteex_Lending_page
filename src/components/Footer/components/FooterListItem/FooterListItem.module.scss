@@ -1,0 +1,18 @@
+@use '@/styles/_variables' as *;
+@use '@/styles/_mixins.scss' as *;
+
+.footerListItem {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+
+  &__icon {
+    @include iconSize;
+  }
+
+  &__text {
+    @include FontFamilyBody(14px);
+    line-height: 143%;
+    letter-spacing: 0.03em;
+  }
+}

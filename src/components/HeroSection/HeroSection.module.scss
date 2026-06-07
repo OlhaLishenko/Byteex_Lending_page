@@ -34,9 +34,11 @@
     flex-direction: column;
     gap: 14px;
     grid-area: header;
+    align-items: center;
 
     @include onDesktop {
       gap: 60px;
+      align-items: flex-start;
     }
 
     &__info {
@@ -48,6 +50,7 @@
       @include onDesktop {
         gap: 46px;
         margin-top: 39px;
+        align-items: flex-start;
       }
     }
   }
@@ -55,19 +58,18 @@
   &__headerImg {
     width: 100%;
 
+    @include onDesktop {
+      margin-top: 90px;
+    }
 
     &__container {
+      margin-top: 20px;
+
       @include onDesktop {
         grid-area: image;
-        padding-left: 100px;
+        padding-left: 50px;
       }
-
     }
-
-    @include onDesktop {
-      margin-top: 137px;
-    }
-
   }
 
   &__btn__container {
@@ -81,7 +83,7 @@
 
   &__review__container {
     align-self: center;
-    max-width: 436px;
+    max-width: 550px;
     position: absolute;
     z-index: 1;
     top: 86px;

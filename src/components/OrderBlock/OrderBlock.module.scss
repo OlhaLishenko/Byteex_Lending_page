@@ -2,13 +2,16 @@
 @use '@/styles/_mixins.scss' as *;
 
 .orderBlock {
-  margin-block: 75px;
   display: flex;
   flex-direction: column;
   gap: 23px;
+  @include ContentPaddingInline;
+  width: 100%;
 
   @include onDesktop {
     gap: 46px;
+    max-width: 1000px;
+    margin-inline: auto;
   }
 
   &__list {
@@ -19,7 +22,6 @@
   }
 
   &__btn {
-    padding-inline: 20px;
     align-self: center;
     margin-top: 18px;
 

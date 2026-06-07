@@ -18,7 +18,11 @@ export default function Benefits() {
       </div>
 
       <BenefitList />
-      {!isDesktop && <BtnContent />}
+      {!isDesktop && (
+        <div className={styles.benefits__btnContainer}>
+          <BtnContent />
+        </div>
+      )}
     </div>
   );
 }

@@ -1,24 +1,23 @@
 @use '@/styles/_variables' as *;
 @use '@/styles/_mixins.scss' as *;
 
+.reviewSlider {
+  width: 500px;
+}
+
 .customSlider {
   display: flex;
   height: 100%;
   position: relative;
   justify-content: center;
   justify-self: center;
-  width: 355px;
-  // width: min(355px, 100%);
+  width: 100%;
+  max-width: 500px;
+  min-width: 320px;
 
   @include onDesktop {
-    // width: 100%;
-    width: 1000px;
+    max-width: 1000px;
     margin-inline: auto;
-  }
-
-  :global(.swiper-slide) {
-
-    // width: 300px;
   }
 
   &__controls {
@@ -44,26 +43,14 @@
     }
   }
 
-  // &__mainShadow {
-  //   box-shadow: 0 3px 10px 1px $box-shadow;
-  // }
-
   &__main {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    overflow: visible !important;
-
-    // overflow: hidden !important;
-
-    // :global(.swiper-wrapper) {
-    //   padding: 10px; // місце для тіні
-    // }
-
-    // border-radius: $border-radius;
+    overflow: hidden !important;
 
     :global(.swiper-slide) {
-      width: 300px; // фіксована ширина
+      display: flex;
     }
 
     &__title {
@@ -99,11 +86,9 @@
 
   &__mainWrap {
     position: relative;
-    min-width: 288px;
     display: flex;
     align-items: center;
-    // visibility: hidden;
-    // padding: 10px;
     overflow: hidden !important;
+    padding: 10px 0;
   }
 }

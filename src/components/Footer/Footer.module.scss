@@ -5,9 +5,27 @@
 .footer {
   display: flex;
   flex-direction: column;
+  padding-bottom: 58px;
+  align-items: center;
+
+  @include onDesktop {
+    padding-bottom: 83px;
+    max-width: 815px;
+  }
 
   &__imageWrapper {
     margin-block: 40px;
+  }
+
+  &__btnWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    min-width: auto;
+
+    @include onDesktop {
+      min-width: 374px;
+    }
   }
 
   &__image {
@@ -20,8 +38,12 @@
     position: absolute;
     left: 0;
     right: 0;
-    transform: rotate(180deg);
     z-index: -1;
+
+    &__image {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   &__text {
@@ -30,5 +52,30 @@
     letter-spacing: 0.03em;
     text-align: center;
     margin-top: 10px;
+  }
+
+  &__paymentInfo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    &__icon {
+      width: 11px;
+      height: 11px;
+      margin-right: 5px;
+    }
+
+    &__text {
+      @include FontFamilyBody(10px, $color: $green-accent);
+      line-height: 170%;
+      letter-spacing: 0.04em;
+    }
+
+    &__line {
+      width: 2px;
+      height: 17px;
+      background-color: $gray;
+      margin-inline: 10px;
+    }
   }
 }

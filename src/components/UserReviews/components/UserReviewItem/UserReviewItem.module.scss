@@ -9,11 +9,12 @@
   background-color: white;
   border: 1px solid $border-color;
   border-radius: 8px;
-  // box-shadow: 0 3px 10px 1px #000;
-  // box-shadow: 0 3px 10px 1px $box-shadow;
+  margin: 20px;
+  box-shadow: 0 3px 10px 1px $box-shadow;
+  width: 100%;
+  height: fit-content;
 
   @include onDesktop {
-    // min-width: 338px;
     width: 288px;
   }
 

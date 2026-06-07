@@ -1,13 +1,7 @@
 import * as styles from './App.module.scss';
-import About from './components/About/About';
-import Benefits from './components/Benefits/Benefits';
 import Footer from './components/Footer/Footer';
 import HeroSection from './components/HeroSection/HeroSection';
-import InfoBanner from './components/InfoBanner/InfoBanner';
-import OrderBlock from './components/OrderBlock/OrderBlock';
-import QuestionBlock from './components/QuestionBlock/QuestionBlock';
-import SliderBlock from './components/SliderBlock/SliderBlock';
-import UserReviews from './components/UserReviews/UserReviews';
+import Main from './components/Main/Main';
 import { useIsDesktop } from './shared/hooks/useIsDesktop';
 import { images } from './shared/variables/images';
 import { sectionText } from './shared/variables/variables';
@@ -33,39 +27,19 @@ export const App = () => {
         </picture>
       </section>
 
-      <div className={styles.app__main}>
-        <div className={styles.app__slider}>
-          <SliderBlock />
-        </div>
-        <div className={styles.app__container}>
-          <Benefits />
-        </div>
-        <div
-          className={`${styles.app__container} ${styles.app__container__gray}`}
-        >
-          <About />
-        </div>
-        <div className={styles.app__container__order}>
-          <OrderBlock />
-        </div>
-        <UserReviews />
-        <div className={styles.app__container}>
-          <QuestionBlock />
-        </div>
-        <div
-          className={`${styles.app__container} ${styles.app__container__gray}`}
-        >
-          <InfoBanner />
-        </div>
+      <Main />
 
-        <div className={styles.app__container}>
-          <Footer />
+      <div
+        className={`
+            ${styles.app__container}
+            ${styles.app__container__footer}
+            `}
+      >
+        <Footer />
+        <div className={styles.app__footerBg}>
+          <img src={images.footer.bg} className={styles.app__footerBg__image} />
         </div>
       </div>
-
-      {/* <div className={styles.app__footerBg}>
-        <img src={images.mainBg.desktop} />
-      </div> */}
     </div>
   );
 };

@@ -6,7 +6,6 @@
   display: grid;
   flex-direction: column;
   grid-template-columns: repeat(1, 1fr);
-  margin-block: 43px;
   grid-template-areas:
     "title"
     "slider"
@@ -14,7 +13,6 @@
     "benefitContent";
 
   @include onDesktop {
-    margin-block: 110px;
     flex-direction: row;
     grid-template-columns: 1fr 500px;
     grid-template-areas:
@@ -44,20 +42,7 @@
     }
   }
 
-  // &__stars {
-  //   display: flex;
-  //   flex-direction: row;
-  //   gap: 2px;
-  //   justify-content: center;
-
-  //   &__text {
-  //     @include FontReview();
-  //   }
-  // }
-
-  // &__btn__content {
-  //   display: flex;
-  //   flex-direction: column;
-  //   gap: 13px;
-  // }
+  &__btnContainer {
+    @include ContentPaddingInline;
+  }
 }

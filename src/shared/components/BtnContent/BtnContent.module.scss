@@ -7,14 +7,8 @@
   gap: 13px;
   align-items: center;
 
-  &__stars {
-    display: flex;
-    flex-direction: row;
-    gap: 2px;
-    justify-content: center;
-
-    &__text {
-      @include FontReview();
-    }
+  @include onDesktop {
+    max-width: $max-btn-width;
+    margin-inline: auto;
   }
 }

@@ -14,16 +14,16 @@ export default function ReviewSlider() {
   return (
     <div className={styles.reviewSlider}>
       <CustomSlider
-        isShadow={true}
+        className={styles.reviewWrapper}
+        sliderClassName={styles.reviewSwiper__container}
         isPagination={true}
         prevRef={prevRef}
         nextRef={nextRef}
         swiperRef={swiperRef}
-        // slidesPerView={'auto'}
         slidesPerView={isDesktop ? 3 : 1}
       >
         {reviews.map(item => (
-          <SwiperSlide key={item.id}>
+          <SwiperSlide key={item.id} style={{ display: 'flex' }}>
             <UserReviewItem content={item} />
           </SwiperSlide>
         ))}

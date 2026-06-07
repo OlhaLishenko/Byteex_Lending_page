@@ -34,7 +34,6 @@ export default function OrderBlock() {
             nextRef={nextRef}
             swiperRef={swiperRef}
             isPagination={false}
-            isShadow={false}
             slidesPerView={'auto'}
           >
             {orderContent.map(item => (

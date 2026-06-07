@@ -17,9 +17,10 @@ type CustomSliderType = {
   nextRef: React.RefObject<HTMLButtonElement>;
   swiperRef: React.MutableRefObject<Swiper | null>;
   children: React.ReactNode;
-  isShadow: boolean;
   isPagination: boolean;
   slidesPerView: number | 'auto';
+  sliderClassName?: string;
+  className?: string;
 };
 
 export default function CustomSlider({
@@ -27,16 +28,16 @@ export default function CustomSlider({
   nextRef,
   swiperRef,
   children,
-  isShadow,
   isPagination,
   slidesPerView,
+  sliderClassName,
+  className,
 }: CustomSliderType) {
   const rawId = useId();
   const paginationId = rawId.replace(/:/g, '');
 
   return (
-    <div className={styles.customSlider}>
-      {/* <div className={styles.customSlider__mainWrap}> */}
+    <div className={classNames(styles.customSlider, className)}>
       <ArrowSlider prevRef={prevRef} nextRef={nextRef}>
         <div className={styles.customSlider__mainWrap}>
           <Swiper
@@ -48,15 +49,13 @@ export default function CustomSlider({
               }
             }}
             className={classNames(styles.customSlider__main, {
-              [styles.customSlider__mainShadow]: isShadow,
+              [sliderClassName ?? '']: !!sliderClassName,
             })}
             modules={[Navigation, Pagination]}
             {...(isPagination && {
               pagination: { clickable: true, el: `#${paginationId}` },
             })}
-            spaceBetween={
-              slidesPerView !== 'auto' && slidesPerView > 1 ? 42 : 42
-            }
+            spaceBetween={slidesPerView !== 'auto' && slidesPerView > 1 ? 0 : 0}
             slidesPerView={slidesPerView}
             navigation
           >
@@ -64,7 +63,6 @@ export default function CustomSlider({
           </Swiper>
         </div>
       </ArrowSlider>
-      {/* </div> */}
 
       {isPagination && (
         <div className={styles.customSlider__paginationList}>

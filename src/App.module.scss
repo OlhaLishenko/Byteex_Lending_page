@@ -2,15 +2,18 @@
 @use './styles/mixins' as *;
 
 .app {
-  // margin-bottom: 80px;
-
   &__container {
     @include ContentPaddingInline;
     justify-content: center;
     display: flex;
 
-    &__gray {
-      background-color: $gray-ligth;
+    &__footer {
+      position: relative;
+      margin-top: 60px;
+
+      @include onDesktop {
+        margin-top: 70px;
+      }
     }
   }
 
@@ -20,6 +23,10 @@
     background-color: $accent;
     @include FontSmall();
     margin-bottom: 14px;
+
+    @include onDesktop {
+      margin-bottom: 33px;
+    }
   }
 
   &__bg {
@@ -32,31 +39,19 @@
     }
   }
 
-  &__main {
+  &__footerBg {
     display: flex;
-    flex-direction: column;
-    gap: 60px;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -2;
+    overflow: hidden;
+    width: 100%;
 
-    @include onDesktop {
-      gap: 70px;
+    &__image {
+      width: 100%;
     }
   }
-
-  &__slider {
-    margin-top: 92px;
-    @include ContentPaddingInline();
-
-    @include onDesktop {
-      margin-top: 77px;
-    }
-  }
-
-  // &__footerBg {
-  //   width: 100%;
-  //   position: absolute;
-  //   left: 0;
-  //   right: 0;
-  //   transform: rotate(180deg);
-  //   z-index: -2;
-  // }
 }

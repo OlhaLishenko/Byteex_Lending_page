@@ -5,16 +5,22 @@
   display: flex;
   flex-direction: column;
   gap: 40px;
-  // align-items: center;
+
+  :global(.customSlider) {
+    width: 400px;
+  }
 
   &__btnContainer {
     @include ContentPaddingInline;
+    width: 100%;
+
+    @include onDesktop {
+      padding-inline: 0;
+    }
   }
 
   &__sliderContainer {
-    @include onDesktop {
-      // margin-inline: 90px
-    }
+    @include onDesktop {}
   }
 
   &__title {

@@ -6,13 +6,8 @@
   flex-direction: column;
   grid-column: 1/-1;
   gap: 26px;
-  // padding-inline: 26px;
   margin-top: 25px;
   grid-area: features;
-
-  @include onDesktop {
-    // grid-column: 1/2;
-  }
 
   &__item {
     display: flex;

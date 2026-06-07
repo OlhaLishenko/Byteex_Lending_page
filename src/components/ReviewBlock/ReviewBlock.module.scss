@@ -25,20 +25,10 @@
       display: flex;
       flex-direction: column;
 
-      &__wrapper {
-        display: flex;
-        flex-direction: row;
-        gap: 5px;
-      }
-
       &__name {
         @include FontFamilyBody(15px);
         line-height: 153%;
         letter-spacing: 0.03em;
-      }
-
-      &__text {
-        @include FontReview();
       }
     }
   }

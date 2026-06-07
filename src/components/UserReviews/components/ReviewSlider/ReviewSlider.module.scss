@@ -1,4 +1,12 @@
 @use '@/styles/_variables' as *;
 @use '@/styles/_mixins.scss' as *;
 
-.reviewSlider {}
+.reviewSlider {
+  &__container {
+    :global(.swiper-slide) {
+      width: 100% !important;
+      height: auto;
+      display: flex;
+    }
+  }
+}

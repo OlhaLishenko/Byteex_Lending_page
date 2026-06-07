@@ -1,3 +1,4 @@
+import ReviewStars from '../../shared/components/ReviewStars/ReviewStars';
 import StarList from '../../shared/components/StarList/StarList';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
 import { sectionText } from '../../shared/variables/variables';
@@ -22,12 +23,7 @@ export default function ReviewBlock() {
           alt="person"
         />
         <div className={styles.reviewBlock__header__title}>
-          <div className={styles.reviewBlock__header__title__wrapper}>
-            <StarList />
-            <span className={styles.reviewBlock__header__title__text}>
-              {sectionText.reviewText}
-            </span>
-          </div>
+          <ReviewStars />
           <span className={styles.reviewBlock__header__title__name}>
             Jane, S.
           </span>

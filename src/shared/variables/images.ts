@@ -10,6 +10,12 @@ import infoBanner3 from '/img/infoBanner_icon3.png';
 import footerImg from '/img/footerImg.png';
 import mainBgBig from '/img/bgSliderDesktop.png';
 import mainBgSmall from '/img/bgSlider.png';
+import bgFooter from '/img/bgSliderFooter.png';
+import payment from '/img/payment_icons.png';
+import iconClock from '/img/icon_clock.svg';
+import footerIconCar from '/img/footer_icon1.png';
+import footerIconTick from '/img/footer_icon2.png';
+import footerIconCart from '/img/footer_icon3.png';
 
 export const images = {
   userReviewsBg: {
@@ -18,7 +24,10 @@ export const images = {
   },
   reviewImageDefault: reviewImg,
   questionBg: questionBg,
-  footer: footerImg,
+  footer: {
+    img: footerImg,
+    bg: bgFooter,
+  },
   mainBg: {
     mobile: mainBgSmall,
     desktop: mainBgBig,
@@ -33,4 +42,9 @@ export const icons = {
     icon2: infoBanner2,
     icon3: infoBanner3,
   },
+  iconPayment: payment,
+  iconClock: iconClock,
+  iconFooterCar: footerIconCar,
+  iconFooterTick: footerIconTick,
+  iconFooterCart: footerIconCart,
 };

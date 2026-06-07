@@ -2,17 +2,13 @@
 @use '@/styles/_mixins.scss' as *;
 
 .benefitList {
+  @include ContentPaddingInline;
   display: flex;
   flex-direction: column;
-  padding-inline: 50px;
   gap: 30px;
   margin-block: 60px;
   grid-column: 1/-1;
   grid-area: benefitList;
-
-  @include onDesktop {
-    // padding-left: 100px;
-  }
 
   &__item {
     display: flex;
@@ -31,6 +27,11 @@
     @include FontFamilyBody(20px, 500, $darkBlue);
     line-height: 120%;
     letter-spacing: 0.04em;
+    text-align: center;
+
+    @include onDesktop {
+      text-align: left;
+    }
   }
 
   &__text {

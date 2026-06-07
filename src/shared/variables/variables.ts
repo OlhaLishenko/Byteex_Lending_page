@@ -4,6 +4,7 @@ import { OrderContent } from '../types/OrderContent';
 import { icons, images } from './images';
 import { Review } from '../types/Review';
 import { InfoBannerContent } from '../types/InfoBannerContent';
+import { FooterTextContent } from '../types/FooterTextContent';
 
 export const sectionText = {
   headerTitle: {
@@ -15,6 +16,7 @@ export const sectionText = {
   footerText: {
     mobile: `Click below to browse our collection!`,
     desktop: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat.`,
+    paymentText: 'Ships in 1-2 Days',
   },
 };
 
@@ -172,5 +174,23 @@ export const infoBannerContent: InfoBannerContent[] = [
     icon: icons.infoBanner.icon3,
     title: '7,321 kWh',
     text: 'of energy saved',
+  },
+];
+
+export const footerListContent: FooterTextContent[] = [
+  {
+    id: 1,
+    icon: icons.iconFooterCar,
+    text: 'FREE Shipping on Orders over $200',
+  },
+  {
+    id: 2,
+    icon: icons.iconFooterTick,
+    text: 'Over 500+ 5 Star Reviews Online',
+  },
+  {
+    id: 3,
+    icon: icons.iconFooterCart,
+    text: 'Made ethically and responsibly.',
   },
 ];
