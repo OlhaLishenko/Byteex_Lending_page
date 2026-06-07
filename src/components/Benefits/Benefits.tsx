@@ -4,6 +4,7 @@ import * as styles from './Benefits.module.scss';
 import BenefitList from './components/BenefitList/BenefitList';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
 import BtnContent from '../../shared/components/BtnContent/BtnContent';
+import { sectionTitle } from '../../shared/variables/variables';
 
 export default function Benefits() {
   const isDesktop = useIsDesktop();
@@ -11,7 +12,7 @@ export default function Benefits() {
   return (
     <div className={styles.benefits}>
       <div className={styles.benefits__container}>
-        <TextTitle>{'Loungewear you can be proud of.'}</TextTitle>
+        <TextTitle>{sectionTitle.benefits}</TextTitle>
       </div>
       <div className={styles.benefits__container__slider}>
         <ImageSlider />

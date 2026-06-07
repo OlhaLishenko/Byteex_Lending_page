@@ -34,6 +34,7 @@ import arrowBtn from '/img/arrow.png';
 
 import star from '/img/star.png';
 import reviewPerson from '/img/review-img.png';
+import aboutSectionBg from '/img/aboutImg.png';
 
 import Artboard1 from '/img/Artboard1.png';
 import Artboard2 from '/img/Artboard2.png';
@@ -55,6 +56,7 @@ export const images = {
   },
   reviewImageDefault: reviewImg,
   reviewImagePerson: reviewPerson,
+  aboutSectionBg: aboutSectionBg,
   questionBg: questionBg,
   footer: {
     img: footerImg,

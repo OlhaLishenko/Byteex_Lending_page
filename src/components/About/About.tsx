@@ -1,6 +1,8 @@
 import BtnCustomize from '../../shared/components/BtnCustomize/BtnCustomize';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
+import { images } from '../../shared/variables/images';
+import { sectionTitle } from '../../shared/variables/variables';
 import * as styles from './About.module.scss';
 
 export const TextAbout = () => {
@@ -39,9 +41,9 @@ export default function About() {
 
   return (
     <div className={styles.about}>
-      <TextTitle>{'Be your best self.'}</TextTitle>
+      <TextTitle>{sectionTitle.about}</TextTitle>
       <div className={styles.about__image__container}>
-        <img src="/img/aboutImg.png" className={styles.about__image} />
+        <img src={images.aboutSectionBg} className={styles.about__image} />
       </div>
       <div className={styles.about__text}>
         <TextAbout />

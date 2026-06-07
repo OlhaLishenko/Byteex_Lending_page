@@ -1,6 +1,7 @@
 @use '@/styles/_variables' as *;
 @use '@/styles/_mixins.scss' as *;
 
+
 .productSlider {
   height: 100%;
   position: relative;
@@ -14,6 +15,10 @@
     letter-spacing: 0.03em;
     text-align: center;
     margin-top: 10px;
+
+    position: absolute;
+    bottom: -40px;
+    overflow: visible;
   }
 
 

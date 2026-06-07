@@ -1,17 +1,14 @@
 import ReviewStars from '../../shared/components/ReviewStars/ReviewStars';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
 import { images } from '../../shared/variables/images';
+import { sectionText } from '../../shared/variables/variables';
 import * as styles from './ReviewBlock.module.scss';
 
 export default function ReviewBlock() {
   const isDesktop = useIsDesktop();
   const text = isDesktop
-    ? `Overjoyed with my Loungewear set. I have the jogger and the
-          sweatshirt. Quality product on every level. From the compostable
-          packaging, to the supplied washing bag, even the garments smells like
-          fresh herbs when I first held them.`
-    : `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque
-          sed sollicitudin dolor, non sodales justo.`;
+    ? sectionText.reviewBlockText.desktop
+    : sectionText.reviewBlockText.mobile;
 
   return (
     <div className={styles.reviewBlock}>

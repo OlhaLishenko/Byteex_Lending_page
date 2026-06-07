@@ -19,6 +19,10 @@ export const sectionText = {
     desktop: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat.`,
     paymentText: 'Ships in 1-2 Days',
   },
+  reviewBlockText: {
+    mobile: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque sed sollicitudin dolor, non sodales justo.`,
+    desktop: `Overjoyed with my Loungewear set. I have the jogger and the sweatshirt. Quality product on every level. From the compostable packaging, to the supplied washing bag, even the garments smells like fresh herbs when I first held them.`,
+  },
 };
 
 export const features: Features[] = [
@@ -32,9 +36,7 @@ export const features: Features[] = [
   },
   {
     icon: icons.listIcons.iconWave,
-    title:
-      // eslint-disable-next-line max-len
-      'Our signature fabric is incredibly comfortable — unlike anything you’ve ever felt.',
+    title: `Our signature fabric is incredibly comfortable — unlike anything you’ve ever felt.`,
   },
 ];
 
@@ -122,6 +124,11 @@ export const reviews: Review[] = [
 ];
 
 export const sectionTitle = {
+  heroSection: 'Don’t apologize for being comfortable.',
+  about: 'Be your best self.',
+  benefits: 'Loungewear you can be proud of.',
+  orderBlock: 'Comfort made easy',
+  userReview: 'What are our fans saying?',
   questionBlock: 'frequently asked questions.',
   infoBanner: 'Our total green impact',
   footer: 'Find something you love.',

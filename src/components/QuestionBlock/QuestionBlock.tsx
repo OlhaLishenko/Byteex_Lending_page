@@ -37,9 +37,11 @@ export default function QuestionBlock() {
                 </span>
               </button>
 
-              {openIndex === i && (
-                <div className={styles.questionBlock__content}>{item.text}</div>
-              )}
+              <div
+                className={`${styles.questionBlock__content} ${openIndex === i ? styles.questionBlock__content__open : ''}`}
+              >
+                {item.text}
+              </div>
             </div>
           ))}
         </div>

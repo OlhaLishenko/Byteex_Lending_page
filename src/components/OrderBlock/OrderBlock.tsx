@@ -1,5 +1,5 @@
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
-import { orderContent } from '../../shared/variables/variables';
+import { orderContent, sectionTitle } from '../../shared/variables/variables';
 import OrderItem from './components/OrderItem/OrderItem';
 import * as styles from './OrderBlock.module.scss';
 import { SwiperSlide } from 'swiper/react';
@@ -19,7 +19,7 @@ export default function OrderBlock() {
 
   return (
     <div className={styles.orderBlock}>
-      <TextTitle>{'Comfort made easy'}</TextTitle>
+      <TextTitle>{sectionTitle.orderBlock}</TextTitle>
 
       <div className={styles.orderBlock__list}>
         {isDesktop ? (

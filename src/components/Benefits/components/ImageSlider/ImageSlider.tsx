@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import { useState } from 'react';
 import * as styles from './ImageSlider.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -13,7 +14,7 @@ import { productSliderContent } from '../../../../shared/variables/variables';
 
 export default function ImageSlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
-  // const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
 
   const { prevRef, nextRef, swiperRef } = useSliderNavigation();
 
@@ -30,7 +31,7 @@ export default function ImageSlider() {
                   swiper.params.navigation!.nextEl = nextRef.current;
                 }
               }}
-              // onSlideChange={swiper => setActiveIndex(swiper.activeIndex)}
+              onSlideChange={swiper => setActiveIndex(swiper.activeIndex)}
               className={styles.productSlider__main}
               modules={[Thumbs, Navigation]}
               thumbs={{ swiper: thumbsSwiper }}
@@ -62,6 +63,9 @@ export default function ImageSlider() {
             </Swiper>
           </div>
         </ArrowSlider>
+        <p className={styles.productSlider__title}>
+          {productSliderContent[activeIndex].title}
+        </p>
       </div>
     </div>
   );
