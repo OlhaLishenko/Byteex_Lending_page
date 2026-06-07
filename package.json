@@ -1,6 +1,6 @@
 {
   "name": "byteex",
-  "homepage": "byteex",
+  "homepage": "https://olhalishenko.github.io/Byteex_Lending_page",
   "version": "0.1.0",
   "keywords": [],
   "author": "Mate Academy",
@@ -37,7 +37,7 @@
     "eslint-plugin-prettier": "^5.1.3",
     "eslint-plugin-react": "^7.34.4",
     "eslint-plugin-react-hooks": "^4.6.2",
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "mochawesome": "^7.1.3",
     "mochawesome-merge": "^4.3.0",
     "mochawesome-report-generator": "^6.2.0",
@@ -60,7 +60,7 @@
     "update": "mate-scripts update",
     "postinstall": "npm run update && cypress verify",
     "predeploy": "npm run build",
-    "deploy": "mate-scripts deploy",
+    "deploy": "gh-pages -d dist",
     "plop": "plop"
   },
   "browserslist": {
