@@ -5,6 +5,7 @@ import { icons, images } from './images';
 import { Review } from '../types/Review';
 import { InfoBannerContent } from '../types/InfoBannerContent';
 import { FooterTextContent } from '../types/FooterTextContent';
+import { SliderImage } from '../types/SliderImage';
 
 export const sectionText = {
   headerTitle: {
@@ -22,15 +23,15 @@ export const sectionText = {
 
 export const features: Features[] = [
   {
-    icon: '/img/icon_sun.png',
+    icon: icons.listIcons.iconSun,
     title: 'Beautiful, comfortable loungewear for day or night.',
   },
   {
-    icon: '/img/icon_cart.png',
+    icon: icons.listIcons.iconCart,
     title: 'No wasteful extras, like tags or plastic packaging.',
   },
   {
-    icon: '/img/icon_wave.png',
+    icon: icons.listIcons.iconWave,
     title:
       // eslint-disable-next-line max-len
       'Our signature fabric is incredibly comfortable — unlike anything you’ve ever felt.',
@@ -38,34 +39,34 @@ export const features: Features[] = [
 ];
 
 export const logos = [
-  { src: '/img/Artboard1.png', alt: 'image1' },
-  { src: '/img/Artboard2.png', alt: 'image2' },
-  { src: '/img/Artboard3.png', alt: 'image3' },
-  { src: '/img/Artboard4.png', alt: 'image4' },
-  { src: '/img/Artboard5.png', alt: 'image5' },
+  { src: images.artboardImgs.artboard1, alt: 'image1' },
+  { src: images.artboardImgs.artboard2, alt: 'image2' },
+  { src: images.artboardImgs.artboard3, alt: 'image3' },
+  { src: images.artboardImgs.artboard4, alt: 'image4' },
+  { src: images.artboardImgs.artboard5, alt: 'image5' },
 ];
 
 export const benefinsContent: IconContent[] = [
   {
-    icon: '/img/icon_cloud.png',
+    icon: icons.listIcons.iconCloud,
     title: 'Ethically sourced.',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis
     tincidunt pellentesque.In eget ipsum et felis finibus consequat.`,
   },
   {
-    icon: '/img/icon_sun.png',
+    icon: icons.listIcons.iconSun,
     title: 'Responsibly made.',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien facilisis
     tincidunt pellentesque. In eget ipsum et felis finibus consequat.`,
   },
   {
-    icon: '/img/icon_nature.png',
+    icon: icons.listIcons.iconNature,
     title: 'Made for living in.',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien
     facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat.`,
   },
   {
-    icon: '/img/icon_wave.png',
+    icon: icons.listIcons.iconWave,
     title: 'Unimaginably comfortable.',
     text: `Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce lobortis sapien
     facilisis tincidunt pellentesque. In eget ipsum et felis finibus consequat. `,
@@ -74,19 +75,19 @@ export const benefinsContent: IconContent[] = [
 
 export const orderContent: OrderContent[] = [
   {
-    icon: 'img/order_icon1.png',
+    icon: icons.iconOrderList.orderIcon1,
     title: 'You save.',
     text: 'Browse our comfort sets and save 15% when you bundle.',
     color: '#f0eeef',
   },
   {
-    icon: 'img/order_icon2.png',
+    icon: icons.iconOrderList.orderIcon2,
     title: 'We ship.',
     text: 'We ship your items within 1-2 days of receiving your order.',
     color: '#f9f0e6',
   },
   {
-    icon: 'img/order_icon3.png',
+    icon: icons.iconOrderList.orderIcon3,
     title: 'You enjoy!',
     text: 'Wear hernest around the house, out on the town, or in bed.',
     color: '#f0eeef',
@@ -193,4 +194,13 @@ export const footerListContent: FooterTextContent[] = [
     icon: icons.iconFooterCart,
     text: 'Made ethically and responsibly.',
   },
+];
+
+export const productSliderContent: SliderImage[] = [
+  { src: images.productSlider.product1, title: 'White Robe' },
+  { src: images.productSlider.product2, title: 'Sleepwear white' },
+  { src: images.productSlider.product3, title: 'Sleepwear white pink' },
+  { src: images.productSlider.product4, title: 'Sleepwear dark' },
+  { src: images.productSlider.product5, title: 'Sleepwear purple' },
+  { src: images.productSlider.product6, title: 'Sleepwear yellow' },
 ];

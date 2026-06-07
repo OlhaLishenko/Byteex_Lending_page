@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import BtnCustomize from '../../shared/components/BtnCustomize/BtnCustomize';
 import ReviewStars from '../../shared/components/ReviewStars/ReviewStars';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';

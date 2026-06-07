@@ -1,3 +1,4 @@
+import { icons } from '../../variables/images';
 import * as styles from './BtnCustomize.module.scss';
 
 export default function BtnCustomize() {
@@ -7,7 +8,7 @@ export default function BtnCustomize() {
         <span>Customize Your Outfit</span>
         <img
           className={styles.btnCustomize__icon}
-          src="/img/arrow.png"
+          src={icons.iconArrowBtn}
           alt="arrow"
         />
       </div>

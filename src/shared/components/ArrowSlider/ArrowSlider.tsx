@@ -6,6 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { icons } from '../../variables/images';
 
 type ArrowSliderType = {
   children: React.ReactNode;
@@ -21,12 +22,12 @@ export default function ArrowSlider({
   return (
     <>
       <button ref={prevRef} className={styles.arrowSlider__btn}>
-        <img src="/img/scrollControl.png" />
+        <img src={icons.iconArrow} />
       </button>
       {children}
       <button ref={nextRef} className={styles.arrowSlider__btn}>
         <img
-          src="/img/scrollControl.png"
+          src={icons.iconArrow}
           className={styles.arrowSlider__btn_control_right}
         />
       </button>

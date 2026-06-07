@@ -1,4 +1,3 @@
-/* eslint-disable max-len */
 import { SwiperSlide } from 'swiper/react';
 import { reviews } from '../../../../shared/variables/variables';
 import * as styles from './ReviewSlider.module.scss';

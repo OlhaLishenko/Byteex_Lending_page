@@ -1,5 +1,6 @@
 import BtnCustomize from '../../shared/components/BtnCustomize/BtnCustomize';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
+import { icons, images } from '../../shared/variables/images';
 import FeatureList from '../FeatureList/FeatureList';
 import ReviewBlock from '../ReviewBlock/ReviewBlock';
 import * as styles from './HeroSection.module.scss';
@@ -8,11 +9,11 @@ export default function HeroSection() {
   return (
     <header className={styles.hero}>
       <div className={styles.hero__header}>
-        <img src="/img/LOGO.png" className={styles.hero__logo} />
+        <img src={icons.iconLogo} className={styles.hero__logo} />
         <TextTitle>Don’t apologize for being comfortable.</TextTitle>
       </div>
       <div className={styles.hero__headerImg__container}>
-        <img src="/img/header.png" className={styles.hero__headerImg} />
+        <img src={images.heroSection} className={styles.hero__headerImg} />
       </div>
 
       <FeatureList />

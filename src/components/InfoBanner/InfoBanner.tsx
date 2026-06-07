@@ -1,4 +1,3 @@
-import Separator from '../../shared/components/Separator/Separator';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
 import {

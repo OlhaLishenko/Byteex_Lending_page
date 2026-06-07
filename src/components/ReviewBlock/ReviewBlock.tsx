@@ -1,7 +1,6 @@
 import ReviewStars from '../../shared/components/ReviewStars/ReviewStars';
-import StarList from '../../shared/components/StarList/StarList';
 import { useIsDesktop } from '../../shared/hooks/useIsDesktop';
-import { sectionText } from '../../shared/variables/variables';
+import { images } from '../../shared/variables/images';
 import * as styles from './ReviewBlock.module.scss';
 
 export default function ReviewBlock() {
@@ -19,7 +18,7 @@ export default function ReviewBlock() {
       <div className={styles.reviewBlock__header}>
         <img
           className={styles.reviewBlock__header__image}
-          src="/img/review-img.png"
+          src={images.reviewImagePerson}
           alt="person"
         />
         <div className={styles.reviewBlock__header__title}>

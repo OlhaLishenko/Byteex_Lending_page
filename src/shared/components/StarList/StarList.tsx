@@ -1,3 +1,4 @@
+import { icons } from '../../variables/images';
 import * as styles from './StarList.module.scss';
 
 export default function StarList() {
@@ -7,7 +8,7 @@ export default function StarList() {
         <img
           className={styles.starList__icon}
           key={i}
-          src="/img/star.png"
+          src={icons.iconStar}
           alt="star"
         />
       ))}

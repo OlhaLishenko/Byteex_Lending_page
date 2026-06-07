@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useState } from 'react';
 import * as styles from './ImageSlider.module.scss';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -7,26 +7,13 @@ import 'swiper/css';
 import 'swiper/css/thumbs';
 import 'swiper/css/navigation';
 import type { Swiper as SwiperType } from 'swiper';
-import { useSliderNavigation } from '../../../../shared/hooks/useSliderNavigation';
 import ArrowSlider from '../../../../shared/components/ArrowSlider/ArrowSlider';
-
-type SliderImage = {
-  src: string;
-  title: string;
-};
-
-const images: SliderImage[] = [
-  { src: '/img/sliderImg1.jpg', title: 'White Robe' },
-  { src: '/img/sliderImg2.png', title: 'Sleepwear white' },
-  { src: '/img/sliderImg3.png', title: 'Sleepwear white pink' },
-  { src: '/img/sliderImg4.png', title: 'Sleepwear dark' },
-  { src: '/img/sliderImg5.png', title: 'Sleepwear purple' },
-  { src: '/img/sliderImg6.png', title: 'Sleepwear yellow' },
-];
+import { useSliderNavigation } from '../../../../shared/hooks/useSliderNavigation';
+import { productSliderContent } from '../../../../shared/variables/variables';
 
 export default function ImageSlider() {
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperType | null>(null);
-  const [activeIndex, setActiveIndex] = useState(0);
+  // const [activeIndex, setActiveIndex] = useState(0);
 
   const { prevRef, nextRef, swiperRef } = useSliderNavigation();
 
@@ -43,13 +30,13 @@ export default function ImageSlider() {
                   swiper.params.navigation!.nextEl = nextRef.current;
                 }
               }}
-              onSlideChange={swiper => setActiveIndex(swiper.activeIndex)}
+              // onSlideChange={swiper => setActiveIndex(swiper.activeIndex)}
               className={styles.productSlider__main}
               modules={[Thumbs, Navigation]}
               thumbs={{ swiper: thumbsSwiper }}
               navigation
             >
-              {images.map(image => (
+              {productSliderContent.map(image => (
                 <SwiperSlide key={image.title}>
                   <img src={image.src} className={styles.image} />
                 </SwiperSlide>
@@ -64,7 +51,7 @@ export default function ImageSlider() {
               spaceBetween={5}
               watchSlidesProgress
             >
-              {images.map(image => (
+              {productSliderContent.map(image => (
                 <SwiperSlide key={image.src}>
                   <img
                     src={image.src}

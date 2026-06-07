@@ -1,6 +1,6 @@
 import Separator from '../../../../shared/components/Separator/Separator';
 import { useIsDesktop } from '../../../../shared/hooks/useIsDesktop';
-import { InfoBannerContent } from '../../../../shared/types/infoBannerContent';
+import { InfoBannerContent } from '../../../../shared/types/InfoBannerContent';
 import * as styles from './InfoBannerItem.module.scss';
 
 type InfoBannerItemType = {

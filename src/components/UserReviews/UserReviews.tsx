@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/dot-notation */
 import BtnContent from '../../shared/components/BtnContent/BtnContent';
 import TextTitle from '../../shared/components/TextTitle/TextTitle';
 import { images } from '../../shared/variables/images';
